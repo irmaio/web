@@ -1,0 +1,26 @@
+{%- comment -%}
+  Volunteering entry. Uses the same .experience grid for visual consistency.
+  Params:
+    role         — volunteer role (e.g. "Social support volunteer")
+    org          — organisation name
+    org_url      — link target for the logo + org name (optional)
+    logo         — image path for the organisation logo
+    dates        — e.g. "2023 – present" (optional)
+    description  — body text, plain or inline markdown (optional)
+{%- endcomment -%}
+<div class="experience experience--centered">
+  <div class="experience__logo">
+    {% if include.org_url %}<a href="{{ include.org_url }}" target="_blank">{% endif %}
+      <img src="{{ include.logo }}" alt="{{ include.org }}">
+    {% if include.org_url %}</a>{% endif %}
+  </div>
+  <div class="experience__body">
+    <div class="experience__header">
+      <span class="experience__role">{{ include.role }}</span>
+      <span class="experience__sep"> — </span>
+      {% if include.org_url %}<a class="experience__org" href="{{ include.org_url }}" target="_blank">{{ include.org }}</a>{% else %}<span class="experience__org">{{ include.org }}</span>{% endif %}
+    </div>
+    {% if include.dates %}<div class="experience__meta">{{ include.dates }}</div>{% endif %}
+    {% if include.description %}<div class="experience__desc">{{ include.description | markdownify }}</div>{% endif %}
+  </div>
+</div>

@@ -96,17 +96,17 @@ A couple of the longer reports I've worked on:
 
 ## Volunteering
 
-{% include education.html
-   degree="Social support volunteer"
-   school="De Regenboog Groep"
-   school_url="https://www.deregenboog.org/en"
+{% include volunteering.html
+   role="Social support volunteer"
+   org="De Regenboog Groep"
+   org_url="https://www.deregenboog.org/en"
    logo="assets/images/RBG.jpeg"
 %}
 
-{% include education.html
-   degree="Helping kids with homework"
-   school="Fundația Principesa Margareta a României"
-   school_url="https://www.frmr.ro/"
+{% include volunteering.html
+   role="Helping kids with homework"
+   org="Fundația Principesa Margareta a României"
+   org_url="https://www.frmr.ro/"
    logo="assets/images/FPM.jpeg"
 %}
 
